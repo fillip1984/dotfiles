@@ -1,0 +1,165 @@
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 34, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 8, // Gaps between modules (4px)
+    "reload_style_on_change": true,
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces", "custom/updates", "custom/app-launcher", "wlr/taskbar"],
+    "modules-center": ["hyprland/window", "hyprland/submap"],
+    "modules-right": ["mpd", "pulseaudio", "cpu", "memory", "temperature", "disk", "network", "clock"],
+    // Modules configuration
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace r-1",
+        "on-scroll-down": "hyprctl dispatch workspace r+1",
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{}",
+        "format-icons": {
+        "urgent": "",
+        "active": "",
+        "default": ""
+        },
+        "persistent-workspaces": {
+        "*": 3
+        }
+    },
+    "custom/updates": {
+        "format": " {}",
+        "tooltip-format": "{}",
+        "escape": true,
+        "return-type": "json",       
+        "exec": "~/.config/waybar/scripts/updates.sh",
+        "restart-interval": 3600,
+        "on-click": "kitty ~/.config/waybar/scripts/installupdates.sh",
+        "tooltip": false
+    },
+    "custom/app-launcher": {
+        "format": "󱗼",
+        "on-click": "rofi -combi-modi window,drun,ssh -theme solarized -font \"hack 10\" -show combi -icon-theme \"Papirus\" -show-icons"
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": ["Alacritty", "kitty"],
+        "app_ids-mapping": {
+            "firefoxdeveloperedition": "firefox-developer-edition"
+        },
+        "rewrite": {
+            "Firefox Web Browser": "Firefox",
+            "Foot Server": "Terminal"
+        }
+    },
+    "hyprland/window": {
+        "rewrite": {
+            "(.*) - Brave": "$1",
+            "(.*) - Vivaldi": "$1",
+            "(.*) - Chromium": "$1"
+        },
+        "separate-outputs": true
+    },
+    "hyprland/submap": {
+        "format": "✌️ {}",
+        "max-length": 8,
+        "tooltip": false
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "",
+        // "format-source": "{volume}% ",
+        // "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false,
+        "on-click": "kitty vtop"
+    },
+    "memory": {
+        "format": "{}% ",
+        "tooltip-format": "{used}GiB of {total}GiB ({avail}GiB available)",
+        "on-click": "kitty vtop"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""],
+        "tooltip": false
+    },
+    "disk": {
+        "format": "{percentage_used}% ",
+        "on-click": "kitty ranger"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },    
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+}

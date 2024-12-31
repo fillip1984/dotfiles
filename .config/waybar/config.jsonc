@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "custom/updates", "custom/app-launcher", "wlr/taskbar"],
     "modules-center": ["hyprland/window", "hyprland/submap"],
-    "modules-right": ["mpd", "pulseaudio", "cpu", "memory", "temperature", "disk", "network", "clock"],
+    "modules-right": ["mpd", "pulseaudio", "cpu", "memory", "temperature", "disk", "network", "clock", "custom/power"],
     // Modules configuration
     "hyprland/workspaces": {
         "on-scroll-up": "hyprctl dispatch workspace r-1",
@@ -122,6 +122,12 @@
         "format": "{:%I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
+    },
+    "custom/power": {
+        "format": "",
+        "on-click": "~/.config/wlogout/scripts/wlogout.sh",
+        "on-click-right": "hyprlock",
+        "tooltip-format": "Left: Power menu\nRight: Lock screen"
     },
 
     "mpd": {

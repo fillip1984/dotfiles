@@ -73,6 +73,7 @@ button:hover {
 #network,
 #clock,
 #custom-media,
+#custom-power,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
@@ -118,4 +119,8 @@ button:hover {
 
 #clock {
     background-color: #64727D;
+}
+
+#custom-power {
+    background-color: #1d1c1c;
 }

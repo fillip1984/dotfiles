@@ -64,6 +64,8 @@ if [[ $(_isInstalled "flatpak") == "0" ]] ;then
     flatpak upgrade
 fi
 
+# Signals to the custom/updates module to re-evaluate the number of update packages available, see: https://man.archlinux.org/man/waybar-custom.5.en#Alternate_Pacman
+pkill -RTMIN+8 waybar
 
 notify-send "Update complete"
 echo 

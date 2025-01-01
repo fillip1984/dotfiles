@@ -34,6 +34,7 @@
         "exec": "~/.config/waybar/scripts/updates.sh",
         "restart-interval": 3600,
         "on-click": "kitty ~/.config/waybar/scripts/installupdates.sh",
+        "signal": 8,
         "tooltip": false
     },
     "custom/app-launcher": {

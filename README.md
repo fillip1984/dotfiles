@@ -20,6 +20,7 @@ Watch this [video](https://www.youtube.com/watch?v=y6XCebnB9gs) to understand ho
     - old anime
     - zelda
     - final fantasy
+    - old school games... excite bike ...
 * [ ] Settle on web browser. 
 * [ ] Fix hyprlock - need to find a suitable config and steal it. Right now the screen is blank and I can't see what I'm doing or even being prompted for.
 * [ ] Fix hypridle - disabled a bunch of it since right now my display doesn't come back after sleep.

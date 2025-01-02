@@ -1,74 +1,31 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica;
+    font-family: Font Awesome, Roboto, Arial, sans-serif;
     font-size: 18px; 
+    color: #fff;
+    border: none;
+    border-radius: 20px;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.1);
-    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-#workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
+.modules-left, .modules-center, .modules-right {
+    background-color: rgba(10, 17, 19, 0.5);
+    padding: 5px 10px;
+    margin: 5px 10px 0px 10px; 
 }
 
 #workspaces button.active { 
-    background-color: rgb(21, 161, 226);
-    border-radius: 1rem;
-    padding: 0 8px;
-}
-
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: rgb(9, 10, 10);
 }
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
-}
-
-#custom-updates {
-    margin: 0 1rem;
-}
-#custom-app-launcher {
-    font-size: 28px;
-}
-
-#taskbar {
-    background-color: #b4adad;
-    border-radius: 2rem;
 }
 
 #pulseaudio,
@@ -81,9 +38,7 @@ button:hover {
 #custom-media,
 #custom-power,
 #mpd {
-    padding: 0 10px;
-    color: #ffffff;
-    border-radius: 2rem;
+    padding: 0 15px;
 }
 
 #pulseaudio {

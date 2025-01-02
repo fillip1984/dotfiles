@@ -27,7 +27,7 @@
         }
     },
     "custom/updates": {
-        "format": " {}",
+        "format": "  {}",
         "tooltip-format": "{}",
         "escape": true,
         "return-type": "json",       

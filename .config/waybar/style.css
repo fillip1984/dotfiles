@@ -14,14 +14,20 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-.modules-left, .modules-center, .modules-right {
+#workspaces, #custom-updates, #custom-app-launcher, #taskbar, .modules-center, .modules-right {
     background-color: rgba(10, 17, 19, 0.5);
     padding: 5px 10px;
-    margin: 5px 10px 0px 10px; 
+    margin: 5px 10px 0px 10px;
+}
+
+#custom-app-launcher {
+    font-size: 22px;
+    padding: 5px 15px;
 }
 
 #workspaces button.active { 
-    background-color: rgb(9, 10, 10);
+    background-color: rgb(168, 168, 168);
+    color: #000;
 }
 
 #workspaces button.urgent {

@@ -1,9 +1,7 @@
 * {
     font-family: Font Awesome, Roboto, Arial, sans-serif;
     font-size: 18px; 
-    color: #fff;
-    border: none;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 window#waybar {
@@ -14,20 +12,27 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-#workspaces, #custom-updates, #custom-app-launcher, #taskbar, .modules-center, .modules-right {
+#custom-updates, .modules-center, .modules-right {
+    color: #fff;
+}
+
+#workspaces, #taskbar, #custom-updates, .modules-center, .modules-right {
     background-color: rgba(10, 17, 19, 0.5);
-    padding: 5px 10px;
+    padding: 5px 5px;
     margin: 5px 10px 0px 10px;
 }
 
-#custom-app-launcher {
-    font-size: 22px;
-    padding: 5px 15px;
+#workspaces button {
+    color: #fff;
+}
+
+#workspaces button:hover {
+    color: #000;
 }
 
 #workspaces button.active { 
-    background-color: rgb(168, 168, 168);
     color: #000;
+    background-color: #c76363;
 }
 
 #workspaces button.urgent {
@@ -41,9 +46,7 @@ window#waybar.hidden {
 #disk,
 #network,
 #clock,
-#custom-media,
-#custom-power,
-#mpd {
+#custom-power {
     padding: 0 15px;
 }
 

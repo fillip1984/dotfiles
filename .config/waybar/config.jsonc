@@ -6,7 +6,7 @@
     "spacing": 4, // Gaps between modules (4px)
     "reload_style_on_change": true,
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "custom/updates", "custom/app-launcher", "wlr/taskbar"],
+    "modules-left": ["hyprland/workspaces", "wlr/taskbar", "custom/updates"],
     "modules-center": ["hyprland/window", "hyprland/submap"],
     "modules-right": ["mpd", "pulseaudio", "cpu", "memory", "temperature", "disk", "network", "clock", "custom/power"],
     // Modules configuration
@@ -26,21 +26,6 @@
         "*": 3
         }
     },
-    "custom/updates": {
-        "format": "  {}",
-        "tooltip-format": "{}",
-        "escape": true,
-        "return-type": "json",       
-        "exec": "~/.config/waybar/scripts/updates.sh",
-        "restart-interval": 3600,
-        "on-click": "kitty ~/.config/waybar/scripts/installupdates.sh",
-        "signal": 8,
-        "tooltip": false
-    },
-    "custom/app-launcher": {
-        "format": "󱗼",
-        "on-click": "rofi -combi-modi window,drun,ssh -theme solarized -font \"hack 10\" -show combi -icon-theme \"Papirus\" -show-icons"
-    },
     "wlr/taskbar": {
         "format": "{icon}",
         "icon-size": 18,
@@ -55,6 +40,17 @@
             "Firefox Web Browser": "Firefox",
             "Foot Server": "Terminal"
         }
+    },
+    "custom/updates": {
+        "format": "  {}",
+        "tooltip-format": "{}",
+        "escape": true,
+        "return-type": "json",       
+        "exec": "~/.config/waybar/scripts/updates.sh",
+        "restart-interval": 3600,
+        "on-click": "kitty ~/.config/waybar/scripts/installupdates.sh",
+        "signal": 8,
+        "tooltip": false
     },
     "hyprland/window": {
         "rewrite": {
@@ -129,44 +125,5 @@
         "on-click": "~/.config/wlogout/scripts/wlogout.sh",
         "on-click-right": "hyprlock",
         "tooltip-format": "Left: Power menu\nRight: Lock screen"
-    },
-
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },    
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }

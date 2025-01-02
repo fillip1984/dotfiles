@@ -91,7 +91,7 @@
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false,
-        "on-click": "kitty --hold -d=~ vtop"
+        "on-click": "kitty --hold ~/.nvm/versions/node/v22.12.0/bin/vtop"
     },
     "memory": {
         "format": "{}% ",

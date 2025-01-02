@@ -91,12 +91,12 @@
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false,
-        "on-click": "kitty vtop"
+        "on-click": "kitty --hold -d=~ vtop"
     },
     "memory": {
         "format": "{}% ",
         "tooltip-format": "{used}GiB of {total}GiB ({avail}GiB available)",
-        "on-click": "kitty vtop"
+        "on-click": "kitty htop"
     },
     "temperature": {
         "critical-threshold": 80,

@@ -11,6 +11,12 @@ Watch this [video](https://www.youtube.com/watch?v=y6XCebnB9gs) to understand ho
 ## TODO
 * [ ] Get swww working so we can have backgrounds rotating in and out.
     - [ ] figure out how to find all files that are images so I can keep the wallpapers directory organized and not just a bunch of image files
+    - [ ] curate more images with these varieties:
+        - megaman
+        - chrono trigger
+        - old anime
+        - zelda
+        - final fantasy
 * [ ] Make Waybar [look the way I want](https://camo.githubusercontent.com/b8805970ca251df50b4f57a8912ee9a875cc6f022ec6a05191ef1e7dff837949/68747470733a2f2f6c696e66696e64656c2e6769746875622e696f2f63646e2f687970726c616e642d707265766965772d622e706e67). Can't figure out how to get items centered within their badge/pill container.
 * [ ] Settle on web browser browser. 
 * [ ] Look into Keyring (KDE Wallet, or something else)

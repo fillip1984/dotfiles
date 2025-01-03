@@ -10,7 +10,7 @@ Watch this [video](https://www.youtube.com/watch?v=y6XCebnB9gs) to understand ho
 
 ## TODO
 * [ ] Come up with a method to get all of my favorite packages to install with arch. That way between stow and a script to do minor other tweaks I can rebuild my machine fairly quickly.
-* [ ] Look into [Auth Agent](https://wiki.hyprland.org/Useful-Utilities/Must-have/#authentication-agent).
+* [ ] Install last tools like docker desktop to see if next step is still necessar.
 * [ ] Look into Keyring (KDE Wallet, or something else).
 * [ ] After all above, and it is proven on another machine, maybe go check out NixOS again...
 

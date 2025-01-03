@@ -1,13 +1,13 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 47, // Waybar height (to be removed for auto height)
+    "height": 49, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "wlr/taskbar", "custom/updates"],
-    "modules-center": ["hyprland/window", "hyprland/submap"],
+    "modules-center": ["hyprland/window"],
     "modules-right": ["mpd", "pulseaudio", "cpu", "memory", "temperature", "disk", "network", "clock", "custom/power"],
     // Modules configuration
     "hyprland/workspaces": {
@@ -43,14 +43,11 @@
     },
     "custom/updates": {
         "format": "  {}",
-        "tooltip-format": "{}",
-        "escape": true,
-        "return-type": "json",       
         "exec": "~/.config/waybar/scripts/updates.sh",
         "restart-interval": 3600,
-        "on-click": "kitty ~/.config/waybar/scripts/installupdates.sh",
-        "signal": 8,
-        "tooltip": false
+        "return-type": "json",       
+        "signal": 8, // See: https://man.archlinux.org/man/waybar-custom.5.en#Alternate_Pacman
+        "on-click": "kitty ~/.config/waybar/scripts/installupdates.sh"
     },
     "hyprland/window": {
         "rewrite": {
@@ -59,11 +56,6 @@
             "(.*) - Chromium": "$1"
         },
         "separate-outputs": true
-    },
-    "hyprland/submap": {
-        "format": "✌️ {}",
-        "max-length": 8,
-        "tooltip": false
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float

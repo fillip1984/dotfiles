@@ -39,6 +39,18 @@ window#waybar.hidden {
     background-color: #eb4d4b;
 }
 
+#custom-updates.green {
+    color: #2ecc71;
+}
+
+#custom-updates.yellow {
+    color: #ebce5b;
+}
+
+#custom-updates.red {
+    color: #eb4d4b;
+}
+
 #pulseaudio,
 #cpu,
 #memory,

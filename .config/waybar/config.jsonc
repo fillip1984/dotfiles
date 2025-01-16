@@ -1,121 +1,131 @@
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 49, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    "reload_style_on_change": true,
-    // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "wlr/taskbar", "custom/updates"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["mpd", "pulseaudio", "cpu", "memory", "temperature", "disk", "network", "clock", "custom/power"],
-    // Modules configuration
-    "hyprland/workspaces": {
-        "on-scroll-up": "hyprctl dispatch workspace r-1",
-        "on-scroll-down": "hyprctl dispatch workspace r+1",
-        "on-click": "activate",
-        "active-only": false,
-        "all-outputs": true,
-        "format": "{}",
-        "format-icons": {
-        "urgent": "",
-        "active": "",
-        "default": ""
-        },
-        "persistent-workspaces": {
-        "*": 3
-        }
+  // "layer": "top", // Waybar at top layer
+  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  "height": 49, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  "spacing": 4, // Gaps between modules (4px)
+  "reload_style_on_change": true,
+  // Choose the order of the modules
+  "modules-left": ["hyprland/workspaces", "wlr/taskbar", "custom/updates"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "mpd",
+    "pulseaudio",
+    "cpu",
+    "memory",
+    "temperature",
+    "disk",
+    "network",
+    "clock",
+    "custom/power"
+  ],
+  // Modules configuration
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace r-1",
+    "on-scroll-down": "hyprctl dispatch workspace r+1",
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
     },
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 18,
-        "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-middle": "close",
-        "ignore-list": ["Alacritty", "kitty"],
-        "app_ids-mapping": {
-            "firefoxdeveloperedition": "firefox-developer-edition"
-        },
-        "rewrite": {
-            "Firefox Web Browser": "Firefox",
-            "Foot Server": "Terminal"
-        }
-    },
-    "custom/updates": {
-        "format": "  {}",
-        "exec": "~/.config/waybar/scripts/updates.sh",
-        "restart-interval": 3600,
-        "return-type": "json",       
-        "signal": 8, // See: https://man.archlinux.org/man/waybar-custom.5.en#Alternate_Pacman
-        "on-click": "kitty ~/.config/waybar/scripts/installupdates.sh"
-    },
-    "hyprland/window": {
-        "rewrite": {
-            "(.*) - Brave": "$1",
-            "(.*) - Vivaldi": "$1",
-            "(.*) - Chromium": "$1"
-        },
-        "separate-outputs": true
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": "",
-        // "format-source": "{volume}% ",
-        // "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false,
-        "on-click": "kitty ~/.config/waybar/scripts/vtop.sh"
-    },
-    "memory": {
-        "format": "{}% ",
-        "tooltip-format": "{used}GiB of {total}GiB ({avail}GiB available)",
-        "on-click": "kitty htop"
-    },
-    "temperature": {
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""],
-        "tooltip": false
-    },
-    "disk": {
-        "format": "{percentage_used}% ",
-        "on-click": "kitty ranger"
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "clock": {
-        "format": "{:%I:%M %p}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "custom/power": {
-        "format": "",
-        "on-click": "~/.config/wlogout/scripts/wlogout.sh",
-        "on-click-right": "hyprlock",
-        "tooltip-format": "Left: Power menu\nRight: Lock screen"
+    "persistent-workspaces": {
+      "*": 3
     }
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": ["Alacritty", "kitty"],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      "Foot Server": "Terminal"
+    }
+  },
+  "custom/updates": {
+    "format": "  {}",
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "restart-interval": 3600,
+    "return-type": "json",
+    "signal": 8, // See: https://man.archlinux.org/man/waybar-custom.5.en#Alternate_Pacman
+    "on-click": "kitty ~/.config/waybar/scripts/installupdates.sh"
+  },
+  "hyprland/window": {
+    "rewrite": {
+      "(.*) - Brave": "$1",
+      "(.*) - Vivaldi": "$1",
+      "(.*) - Chromium": "$1"
+    },
+    "separate-outputs": true
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-bluetooth-muted": " {icon}",
+    "format-muted": "",
+    // "format-source": "{volume}% ",
+    // "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false,
+    "on-click": "kitty ~/.config/waybar/scripts/vtop.sh"
+  },
+  "memory": {
+    "format": "{}% ",
+    "tooltip-format": "{used}GiB of {total}GiB ({avail}GiB available)",
+    "on-click": "kitty htop"
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C {icon}",
+    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""],
+    "tooltip": false
+  },
+  "disk": {
+    "format": "{percentage_used}% ",
+    "on-click": "kitty ncdu --color dark /"
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "~/.config/wlogout/scripts/wlogout.sh",
+    "on-click-right": "hyprlock",
+    "tooltip-format": "Left: Power menu\nRight: Lock screen"
+  }
 }

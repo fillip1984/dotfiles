@@ -8,11 +8,16 @@ Watch this [video](https://www.youtube.com/watch?v=y6XCebnB9gs) to understand ho
 [me@myPC ~/dotfiles]$ stow .
 ```
 
-## TODO
-* [ ] Come up with a method to get all of my favorite packages to install with arch. That way between stow and a script to do minor other tweaks I can rebuild my machine fairly quickly.
-* [ ] Install last tools like docker desktop to see if next step is still necessar.
-* [ ] Look into Keyring (KDE Wallet, or something else).
-* [ ] After all above, and it is proven on another machine, maybe go check out NixOS again...
+## Command to take care of installs
+You can run this command to take care of installing move things referenced by the dot config files... still hunting them all down...
+``` bash
+yay -Syu chromium dunst figlet gum htop hypridle hyprlock hyprshot kitty ncdu rofi stow swww ttf-nerd-fonts-symbols vscodium-bin vtop waybar wlogout --needed --noconfirm
+```
+
+Do note, that if you want to swap one of the above tools (i.e. kitty, dolphin, chromium, codium) that you'll want to look through all of the files in the worspace to learn where it all needs to be changed. Kitty for example is referenced by waybar's config.jsonc and hyprland.conf.
+
+## Troubleshooting waybar
+To see what's broken and where it lives when it comes to waybar you can pkill waybar and then launch waybar from the terminal and get console out...
 
 ## Nice to haves
 * [ ] Make Waybar [look the way I want](https://camo.githubusercontent.com/b8805970ca251df50b4f57a8912ee9a875cc6f022ec6a05191ef1e7dff837949/68747470733a2f2f6c696e66696e64656c2e6769746875622e696f2f63646e2f687970726c616e642d707265766965772d622e706e67).
@@ -23,4 +28,5 @@ Watch this [video](https://www.youtube.com/watch?v=y6XCebnB9gs) to understand ho
     - old anime
     - zelda
     - final fantasy
-    - old school games... excite bike ...
+    - old school games... 
+    - excite bike ...

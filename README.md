@@ -12,7 +12,7 @@ Watch this [video](https://www.youtube.com/watch?v=y6XCebnB9gs) to understand ho
 You can run this command to take care of installing most things referenced by the dot config files... some things come with your os install:
 
 ``` bash
-yay -Syu chromium dunst figlet gum htop hypridle hyprlock hyprshot kitty ncdu rofi stow swww ttf-nerd-fonts-symbols vscodium-bin vtop waybar wlogout --needed --noconfirm
+yay -Syu chromium dunst figlet gum htop hypridle hyprland hyprlock hyprshot kitty ncdu rofi stow swww ttf-nerd-fonts-symbols vscodium-bin vtop waybar wlogout --needed --noconfirm
 ```
 
 Do note, that if you want to swap one of the above tools (i.e. kitty, dolphin, chromium, codium) that you'll want to look through all of the files in the workspace to learn where it all needs to be changed. Kitty for example is referenced by waybar's config.jsonc and hyprland.conf.

@@ -37,10 +37,5 @@ To see what's broken and where it lives when it comes to waybar you can pkill wa
 * [ ] get backgrounds from places like this:
     * https://www.dropbox.com/scl/fo/3pcwifpv2jjghaw00ry6w/AOWrRAa5-kv-FlTxph1RajU?rlkey=ebcqutm32vrckt8df36z52kfn&e=1&dl=0
 * [ ] curate more images with these varieties:
-    - megaman
-    - chrono trigger
-    - old anime
-    - zelda
-    - final fantasy
-    - old school games... 
-    - excite bike ...
+    - old anime like cowboy bebop
+    - old school games like excite bike, megaman, chrono trigger, final fantasy, zelda...

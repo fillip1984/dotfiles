@@ -11,7 +11,7 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # Set the path to the wallpapers directory
-wallpapersDir="$HOME/Pictures/wallpapers"
+wallpapersDir="$HOME/Pictures/Wallpapers"
 
 # Start an infinite loop
 while true; do

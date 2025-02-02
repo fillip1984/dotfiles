@@ -17,6 +17,12 @@ yay -Syu chromium dunst figlet gum htop hypridle hyprland hyprlock hyprshot kitt
 
 Do note, that if you want to swap one of the above tools (i.e. kitty, dolphin, chromium, codium) that you'll want to look through all of the files in the workspace to learn where it all needs to be changed. Kitty for example is referenced by waybar's config.jsonc and hyprland.conf.
 
+## Nvidia install and config
+``` bash
+yay -Syu nvidia-inst --needed --noconfirm
+nvidia-inst
+```
+
 ## Troubleshooting Tips
 
 ### Waybar

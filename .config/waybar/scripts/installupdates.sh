@@ -74,4 +74,5 @@ echo
 echo 
 
 echo "Press [ENTER] to close."
-read
+sleep 30
+exit 130

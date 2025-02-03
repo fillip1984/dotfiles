@@ -58,7 +58,7 @@ if [[ $(_isInstalled "timeshift") == "0" ]] ;then
     echo
 fi
 
-yay
+yay --noconfirm
 
 if [[ $(_isInstalled "flatpak") == "0" ]] ;then
     flatpak upgrade

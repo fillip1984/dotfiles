@@ -20,8 +20,8 @@ window#waybar.hidden {
 
 #workspaces,
 #taskbar,
+#window,
 #custom-updates,
-.modules-center,
 .modules-right {
   background-color: rgba(10, 17, 19, 0.5);
   padding: 5px 5px;
@@ -59,9 +59,13 @@ window#waybar.hidden {
 
 #custom-spotify {
   padding: 0 10px;
-  /* margin: 5px 4px; */
-  background-color: #1db954;
+  margin: 5px 10px 0px 10px;
+  background-color: rgba(29, 185, 84, 0.8);
   color: black;
+}
+
+#custom-spotify:hover {
+  background-color: rgba(29, 185, 84, 1);
 }
 
 #pulseaudio,

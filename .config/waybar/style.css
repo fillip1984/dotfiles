@@ -1,54 +1,67 @@
 * {
-    font-family: Font Awesome, Roboto, Arial, sans-serif;
-    font-size: 18px; 
-    border-radius: 15px;
+  font-family: Font Awesome, Roboto, Arial, sans-serif;
+  font-size: 18px;
+  border-radius: 15px;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
-#custom-updates, .modules-center, .modules-right {
-    color: #fff;
+#custom-updates,
+.modules-center,
+.modules-right {
+  color: #fff;
 }
 
-#workspaces, #taskbar, #custom-updates, .modules-center, .modules-right {
-    background-color: rgba(10, 17, 19, 0.5);
-    padding: 5px 5px;
-    margin: 5px 10px 0px 10px;
+#workspaces,
+#taskbar,
+#custom-updates,
+.modules-center,
+.modules-right {
+  background-color: rgba(10, 17, 19, 0.5);
+  padding: 5px 5px;
+  margin: 5px 10px 0px 10px;
 }
 
 #workspaces button {
-    color: #fff;
+  color: #fff;
 }
 
 #workspaces button:hover {
-    color: #000;
+  color: #000;
 }
 
-#workspaces button.active { 
-    color: #000;
-    background-color: #c76363;
+#workspaces button.active {
+  color: #000;
+  background-color: #c76363;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+  background-color: #eb4d4b;
 }
 
 #custom-updates.green {
-    color: #2ecc71;
+  color: #2ecc71;
 }
 
 #custom-updates.yellow {
-    color: #ebce5b;
+  color: #ebce5b;
 }
 
 #custom-updates.red {
-    color: #eb4d4b;
+  color: #eb4d4b;
+}
+
+#custom-spotify {
+  padding: 0 10px;
+  /* margin: 5px 4px; */
+  background-color: #1db954;
+  color: black;
 }
 
 #pulseaudio,
@@ -59,50 +72,50 @@ window#waybar.hidden {
 #network,
 #clock,
 #custom-power {
-    padding: 0 15px;
+  padding: 0 15px;
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
+  background-color: #f1c40f;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+  background-color: #90b1b1;
+  color: #2a5c45;
 }
 
 #cpu {
-    background-color: #2ecc71;
+  background-color: #2ecc71;
 }
 
 #memory {
-    background-color: #9b59b6;
+  background-color: #9b59b6;
 }
 
 #temperature {
-    background-color: #f0932b;
+  background-color: #f0932b;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+  background-color: #eb4d4b;
 }
 
 #disk {
-    background-color: #964B00;
+  background-color: #964b00;
 }
 
 #network {
-    background-color: #2980b9;
+  background-color: #2980b9;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+  background-color: #f53c3c;
 }
 
 #clock {
-    background-color: #64727D;
+  background-color: #64727d;
 }
 
 #custom-power {
-    background-color: #1d1c1c;
+  background-color: #1d1c1c;
 }

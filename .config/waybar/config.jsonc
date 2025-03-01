@@ -10,6 +10,7 @@
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "mpd",
+    "custom/spotify",
     "pulseaudio",
     "cpu",
     "memory",
@@ -58,6 +59,14 @@
     "return-type": "json",
     "signal": 8, // See: https://man.archlinux.org/man/waybar-custom.5.en#Alternate_Pacman
     "on-click": "kitty ~/.config/waybar/scripts/installupdates.sh"
+  },
+  "custom/spotify": {
+    "exec": "~/.config/waybar/scripts/mediaplayer.py --player spotify",
+    "format": "{}  ",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
   },
   "hyprland/window": {
     "rewrite": {

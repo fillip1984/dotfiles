@@ -1,0 +1,8 @@
+change line 69 - focus follows mouse
+
+    Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+E hotkey-overlay-title="Open File Browser" { spawn "dolphin"; }
+    Mod+B hotkey-overlay-title="Open Web Browser" { spawn "chromium"; }
+    Mod+S hotkey-overlay-title="Open Spotify" { spawn "spotify"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }

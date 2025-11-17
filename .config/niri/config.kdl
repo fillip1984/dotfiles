@@ -42,7 +42,7 @@ binds {
     MOD+SPACE                           hotkey-overlay-title="Open App Launcher: wofi" { spawn-sh "wofi"; }
     MOD+B                               hotkey-overlay-title="Open Browser: chromium" { spawn-sh "chromium"; }
     MOD+G                               hotkey-overlay-title="Open Games: Steam" { spawn-sh "steam"; }
-    MOD+E                               hotkey-overlay-title="Open File Explorer: dolphin" { spawn-sh "dolphin"; }
+    MOD+E                               hotkey-overlay-title="Open File Explorer: nautilus" { spawn-sh "nautilus"; }
     MOD+P                               hotkey-overlay-title="Open IDE of choice: VSCode" { spawn-sh "code"; }
     Mod+S                               hotkey-overlay-title="Open Spotify" { spawn "spotify"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
